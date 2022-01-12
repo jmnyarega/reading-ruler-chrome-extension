@@ -36,7 +36,6 @@ function createBlock() {
       text-align: center;
       height: ${height}px;
       width: ${width}px;
-      opacity: ${opacity / 10};
       top: 5%;
       left: 50%;
       transform: translateX(-50%);
