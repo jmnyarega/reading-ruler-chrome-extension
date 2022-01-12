@@ -2,7 +2,14 @@ function createBlock() {
   chrome.storage.sync.get(
     "options",
     ({
-      options: { height, width, borderWidth, borderColor, backgroundColor },
+      options: {
+        height,
+        width,
+        borderWidth,
+        borderColor,
+        backgroundColor,
+        opacity,
+      },
     }) => {
       if (document.getElementById("blockContainer")) {
         const element = document.getElementById("blockContainer");
@@ -29,6 +36,7 @@ function createBlock() {
       text-align: center;
       height: ${height}px;
       width: ${width}px;
+      opacity: ${opacity / 10};
       top: 5%;
       left: 50%;
       transform: translateX(-50%);

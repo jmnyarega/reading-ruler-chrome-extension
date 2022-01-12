@@ -6,6 +6,7 @@ function save_options() {
   const borderWidth = document.getElementById("border-width").value;
   const borderColor = document.getElementById("border-color").value;
   const backgroundColor = document.getElementById("background-color").value;
+  const opacity = document.getElementById("opacity").value;
 
   options = {
     height,
@@ -13,6 +14,7 @@ function save_options() {
     borderWidth,
     borderColor,
     backgroundColor,
+    opacity,
   };
 
   chrome.storage.sync.set({ options }, function () {
@@ -33,9 +35,11 @@ function restore_options() {
         borderWidth: 1,
         borderColor: "#FF79C6",
         backgroundColor: "#282A36",
+        opacity: 8,
       },
     },
     function ({ options }) {
+      document.getElementById("opacity").value = options.opacity;
       document.getElementById("height").value = options.height;
       document.getElementById("width").value = options.width;
       document.getElementById("border-width").value = options.borderWidth;
