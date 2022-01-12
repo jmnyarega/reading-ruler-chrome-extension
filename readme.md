@@ -4,4 +4,5 @@
 
 ### Screenshots
 
-- ![reading an artical](./screenshots/001.png)
+- ![Reading an article](./screenshots/001.png)
+- ![Adjust your settings](./screenshots/002.png)
