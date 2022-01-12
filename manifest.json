@@ -1,9 +1,9 @@
 {
-  "name": "Page Redder",
+  "name": "Block",
   "action": {},
   "manifest_version": 3,
-  "version": "0.2",
-  "description": "Turns the page red when you click the icon",
+  "version": "0.1",
+  "description": "Blocks unnecessary content while reading web content",
   "permissions": ["activeTab", "scripting", "storage"],
   "background": {
     "service_worker": "js/background.js"
