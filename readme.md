@@ -1,4 +1,4 @@
-# Block
+# Reading Ruler
 
 - A browser extension that blocks unnecessary content while reading web content, hence allowing you to focus on what's important.
 
@@ -11,4 +11,3 @@
 ## Features to come
 
 - [ ] Adjust bar height width using your mouse
-

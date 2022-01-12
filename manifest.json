@@ -1,9 +1,9 @@
 {
-  "name": "Block",
+  "name": "Reading Ruler",
   "action": {},
   "manifest_version": 3,
   "version": "0.1",
-  "description": "Blocks unnecessary content while reading web content",
+  "description": "A ruler for reading content on the web",
   "permissions": ["activeTab", "scripting", "storage"],
   "background": {
     "service_worker": "js/background.js"

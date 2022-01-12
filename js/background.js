@@ -43,6 +43,8 @@ function createBlock() {
         top: 5%;
         transform: translateX(-50%);
         cursor: move;
+
+        transition: all 0.2ms ease-in-out;
     }
 
     #extension-close-button {
