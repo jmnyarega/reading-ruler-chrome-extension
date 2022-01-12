@@ -47,8 +47,8 @@ function createBlock() {
 
     #extension-close-button {
       position: absolute;
-      right: 10px;
-      top: 10px;
+      right: 5px;
+      top: 5px;
 
       border: 1px solid transparent;
       outline: none;

@@ -4,61 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>config page</title>
+    <style>
+      .form-element {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .form-element + .form-element {
+        margin-top: 1rem;
+      }
+
+      .feedback-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      #status {
+        color: darkgreen;
+        font-weight: bold;
+      }
+
+      button {
+        outline: none;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>configure your elements here....</h1>
+    <h1>Style Your Block Element</h1>
 
-    <div>
-      <label for="height">
-        Height:
+    <div class="form-group">
+      <div class="form-element">
+        <label for="height"> Height: </label>
         <input type="number" name="" id="height" />
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label for="width">
-        Width:
+      <div class="form-element">
+        <label for="width"> Width: </label>
         <input type="number" name="" id="width" />
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label for="border-width">
-        Border Width:
+      <div class="form-element">
+        <label for="border-width"> Border Width: </label>
         <input type="number" name="" id="border-width" />
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label for="border-color">
-        Border Radius:
+      <div class="form-element">
+        <label for="border-color"> Border Radius: </label>
         <input type="number" name="" id="border-radius" />
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label for="border-color">
-        Border Color:
+      <div class="form-element">
+        <label for="border-color"> Border Color: </label>
         <input type="color" name="" id="border-color" />
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label for="background-color">
-        Background Color:
+      <div class="form-element">
+        <label for="background-color"> Background Color: </label>
         <input type="color" name="" id="background-color" />
-      </label>
-    </div>
+      </div>
 
-    <div>
-      <label for="background-color">
-        Opacity:
+      <div class="form-element">
+        <label for="background-color"> Opacity: </label>
         <input type="number" name="" id="opacity" min="1" max="10" />
-      </label>
+      </div>
     </div>
 
-    <div id="status"></div>
-    <button id="save">Save</button>
+    <div class="feedback-area">
+      <div id="status"></div>
+      <button id="save">Save</button>
+    </div>
+
     <script src="./js/options.js"></script>
   </body>
 </html>
