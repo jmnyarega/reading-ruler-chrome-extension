@@ -13,13 +13,13 @@ function createBlock() {
       },
     }) => {
       if (document.getElementById("blockContainer")) {
-        const element = document.getElementById("blockContainer");
-        document.body.removeChild(element);
+        const blockElement = document.getElementById("blockContainer");
+        document.body.removeChild(blockElement);
       }
 
       if (document.getElementById("block-styles")) {
-        const element = document.getElementById("block-styles");
-        document.head.removeChild(element);
+        const styleElement = document.getElementById("block-styles");
+        document.head.removeChild(styleElement);
       }
 
       const blockContainer = document.createElement("div");
@@ -77,36 +77,36 @@ function createBlock() {
 
       dragElement(blockContainer);
 
-      function dragElement(elmnt) {
-        let pos1 = 0,
-          pos2 = 0,
-          pos3 = 0,
-          pos4 = 0;
+      function dragElement(barElement) {
+        let xDelta = 0,
+          yDelta = 0,
+          x = 0,
+          y = 0;
 
-        elmnt.onmousedown = dragMouseDown;
+        barElement.onmousedown = dragMouseDown;
 
         function dragMouseDown(e) {
           e = e || window.event;
           e.preventDefault();
           // get the mouse cursor position at startup:
-          pos3 = e.clientX;
-          pos4 = e.clientY;
+          x = e.clientX;
+          y = e.clientY;
           document.onmouseup = closeDragElement;
           // call a function whenever the cursor moves:
-          document.onmousemove = elementDrag;
+          document.onmousemove = dragBarElement;
         }
 
-        function elementDrag(e) {
+        function dragBarElement(e) {
           e = e || window.event;
           e.preventDefault();
           // calculate the new cursor position:
-          pos1 = pos3 - e.clientX;
-          pos2 = pos4 - e.clientY;
-          pos3 = e.clientX;
-          pos4 = e.clientY;
+          xDelta = x - e.clientX;
+          yDelta = y - e.clientY;
+          x = e.clientX;
+          y = e.clientY;
           // set the element's new position:
-          elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-          elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+          barElement.style.top = barElement.offsetTop - yDelta + "px";
+          barElement.style.left = barElement.offsetLeft - xDelta + "px";
         }
 
         function closeDragElement() {
