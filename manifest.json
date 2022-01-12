@@ -4,8 +4,12 @@
   "manifest_version": 3,
   "version": "0.2",
   "description": "Turns the page red when you click the icon",
-  "permissions": ["activeTab", "scripting"],
+  "permissions": ["activeTab", "scripting", "storage"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
+  },
+  "options_ui": {
+    "open_in_tab": false,
+    "page": "options.html"
   }
 }
