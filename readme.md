@@ -5,4 +5,3 @@
 ### Screenshots
 
 - ![reading an artical](./screenshots/001.png)
-- ![reading an artical](./screenshots/002.png)

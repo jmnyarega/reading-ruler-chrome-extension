@@ -8,6 +8,7 @@ function createBlock() {
         borderWidth,
         borderColor,
         backgroundColor,
+        borderRadius,
         opacity,
       },
     }) => {
@@ -28,18 +29,20 @@ function createBlock() {
       blockStyles.setAttribute("id", "block-styles");
 
       blockStyles.innerHTML = `
-    #blockContainer {
-      position: fixed;
-      z-index: 1000;
-      background-color: ${backgroundColor};
-      border: ${borderWidth}px solid ${borderColor};
-      text-align: center;
-      height: ${height}px;
-      width: ${width}px;
-      top: 5%;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: move;
+      #blockContainer {
+        position: fixed;
+        z-index: 1000;
+        background-color: ${backgroundColor};
+        border: ${borderWidth}px solid ${borderColor};
+        text-align: center;
+        height: ${height}px;
+        width: ${width}px;
+        opacity: ${opacity / 10};
+        border-radius: ${borderRadius}px;
+        left: 50%;
+        top: 5%;
+        transform: translateX(-50%);
+        cursor: move;
     }
 
     #extension-close-button {
@@ -55,7 +58,6 @@ function createBlock() {
       font-weight: bold;
 
       display: flex;
-      align-items: center;
       justify-content: center;
 
       width: 25px;
@@ -76,7 +78,7 @@ function createBlock() {
       dragElement(blockContainer);
 
       function dragElement(elmnt) {
-        var pos1 = 0,
+        let pos1 = 0,
           pos2 = 0,
           pos3 = 0,
           pos4 = 0;

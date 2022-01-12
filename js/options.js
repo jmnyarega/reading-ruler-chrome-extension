@@ -4,6 +4,7 @@ function save_options() {
   const height = document.getElementById("height").value;
   const width = document.getElementById("width").value;
   const borderWidth = document.getElementById("border-width").value;
+  const borderRadius = document.getElementById("border-radius").value;
   const borderColor = document.getElementById("border-color").value;
   const backgroundColor = document.getElementById("background-color").value;
   const opacity = document.getElementById("opacity").value;
@@ -15,6 +16,7 @@ function save_options() {
     borderColor,
     backgroundColor,
     opacity,
+    borderRadius,
   };
 
   chrome.storage.sync.set({ options }, function () {
@@ -36,6 +38,7 @@ function restore_options() {
         borderColor: "#FF79C6",
         backgroundColor: "#282A36",
         opacity: 8,
+        borderRadius: 10,
       },
     },
     function ({ options }) {
@@ -44,6 +47,7 @@ function restore_options() {
       document.getElementById("width").value = options.width;
       document.getElementById("border-width").value = options.borderWidth;
       document.getElementById("border-color").value = options.borderColor;
+      document.getElementById("border-radius").value = options.borderRadius;
       document.getElementById("background-color").value =
         options.backgroundColor;
     }
