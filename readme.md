@@ -11,3 +11,4 @@
 ## Features to come
 
 - [ ] Adjust bar height width using your mouse
+- [ ] Swicth to popup from options

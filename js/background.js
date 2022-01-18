@@ -31,7 +31,7 @@ function createBlock() {
       blockStyles.innerHTML = `
       #blockContainer {
         position: fixed;
-        z-index: 1000;
+        z-index: 1000000;
         background-color: ${backgroundColor};
         border: ${borderWidth}px solid ${borderColor};
         text-align: center;
@@ -59,13 +59,13 @@ function createBlock() {
       cursor: pointer;
       font-weight: bold;
 
-      display: flex;
-      justify-content: center;
+      display: grid;
+      place-content: center;
 
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
       border-radius: 50%;
-      background-color: red;
+      background-color: #ff5555;
     }
   `;
 
