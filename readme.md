@@ -5,8 +5,8 @@
 ### Screenshots
 
 - ![Reading an article](./screenshots/001.png)
-- ![Adjust your settings](./screenshots/002.png)
 
+- ![Adjust your settings](./screenshots/002.png)
 
 ## Features to come
 
