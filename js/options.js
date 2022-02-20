@@ -33,7 +33,7 @@ function restore_options() {
     {
       options: {
         height: 50,
-        width: 800,
+        width: 80,
         borderWidth: 1,
         borderColor: "#FF79C6",
         backgroundColor: "#282A36",

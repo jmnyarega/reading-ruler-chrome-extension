@@ -46,7 +46,7 @@ function createBlock() {
         border: ${borderWidth}px solid ${borderColor};
         text-align: center;
         height: ${height}px;
-        width: ${width}px;
+        width: ${width}%;
         opacity: ${opacity / 10};
         border-radius: ${borderRadius}px;
         left: 50%;
