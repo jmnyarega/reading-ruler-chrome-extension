@@ -1,11 +1,11 @@
 function createBlock() {
   const defaulOptions = {
     height: 50,
-    width: 800,
+    width: 80,
     borderWidth: 1,
     borderColor: "#44475A",
     backgroundColor: "#282A36",
-    opacity: 10,
+    opacity: 90,
     borderRadius: 0,
   };
 
