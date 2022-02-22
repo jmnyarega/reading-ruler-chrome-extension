@@ -32,14 +32,19 @@ function createBlock() {
       document.head.removeChild(styleElement);
     }
 
+    const blockContainerId = `blockContainer-${Math.floor(
+      Math.random() * 1000
+    )}`;
+    const closeButtonId = `closeButton-${Math.floor(Math.random() * 1000)}`;
+
     const blockContainer = document.createElement("div");
-    blockContainer.setAttribute("id", "blockContainer");
+    blockContainer.setAttribute("id", blockContainerId);
 
     const blockStyles = document.createElement("style");
     blockStyles.setAttribute("id", "block-styles");
 
     blockStyles.innerHTML = `
-      #blockContainer {
+      #${blockContainerId} {
         position: fixed;
         z-index: 1000000;
         background-color: ${backgroundColor};
@@ -52,12 +57,12 @@ function createBlock() {
         left: 50%;
         top: 5%;
         transform: translateX(-50%);
-        cursor: move;
+        cursor: pointer;
 
         transition: all 0.2ms ease-in-out;
     }
 
-    #extension-close-button {
+    #${closeButtonId} {
       position: absolute;
       right: 5px;
       top: 5px;
@@ -75,13 +80,13 @@ function createBlock() {
       width: 20px;
       height: 20px;
       border-radius: 50%;
-      background-color: #ff5555;
+      background-color: #FF79C6;
     }
   `;
 
     const closeButton = document.createElement("button");
     closeButton.innerHTML = "x";
-    closeButton.setAttribute("id", "extension-close-button");
+    closeButton.setAttribute("id", closeButtonId);
     blockContainer.appendChild(closeButton);
 
     document.head.appendChild(blockStyles);
